@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.obsidian/
+
+# Tooling cache
+.cache/
+
+# Local-only working files
+*.local.md
+DRAFT-*.md
+NOTES-*.md
