@@ -12,10 +12,14 @@ Each entry MUST state the change, the rationale, and — for major changes — w
 
 ### Added
 - `seeds/jailbreak/` — public reference sample of jailbreak / prompt-injection scenarios, with at least one scenario per attack class defined in §1.5.2: direct-instruction, role-confusion, authority-impersonation, multi-turn-escalation, indirect-injection, encoded-payload, and social-engineering. Ten scenarios total in the initial seed.
-- §1.5.2 updated to enumerate the seven attack classes explicitly, to reference the public seed directory, and to link the binding scenario schema in the private repo's auditor handbook.
+- §1.5.2 updated to enumerate the seven attack classes explicitly, to reference the public seed directory, and to reference (without exposing) the binding scenario schema in the private repo's auditor handbook.
+
+### Changed
+- §1.5.2 now explains the ≥ 30% private-scenario floor in relation to the ≥ 50% private floor for crisis scenarios in §4.3.2. The differential is intentional: rated jailbreak scoring bounds the gain from gaming the public sample, whereas a categorical crisis failure fails the entire audit (§4.3.4). The jailbreak attack landscape also evolves faster, so a smaller stable-private floor with more frequent refresh is operationally appropriate. Adding the rationale closes a drift point a reader could otherwise read as inconsistency between the two layers.
 
 ### Notes
-- Public-seed scenario files conform to the scenario YAML schema published in the private repository at `auditor-handbook/scenario-schema.md`. The seed exists so vendors and researchers can prepare and critique without needing access to the private library; per §1.5.2 the ≥ 30% private rotation continues to defend against gameability.
+- Public-seed scenario files conform to the scenario YAML schema maintained in the private repository at `auditor-handbook/scenario-schema.md`. The reference in §1.5.2 to that document is intentional even though the link 404s for unauthenticated readers — the methodology text frames the schema as restricted-access material, not as a missing resource.
+- The seed exists so vendors and researchers can prepare and critique without needing access to the private library; per §1.5.2 the ≥ 30% private rotation continues to defend against gameability.
 - No effect on tiers, thresholds, or pass criteria. Patch-level addition.
 
 ---
