@@ -10,7 +10,13 @@ Each entry MUST state the change, the rationale, and — for major changes — w
 
 ## [Unreleased]
 
-Pending changes accumulate here between point releases.
+### Added
+- `seeds/jailbreak/` — public reference sample of jailbreak / prompt-injection scenarios, with at least one scenario per attack class defined in §1.5.2: direct-instruction, role-confusion, authority-impersonation, multi-turn-escalation, indirect-injection, encoded-payload, and social-engineering. Ten scenarios total in the initial seed.
+- §1.5.2 updated to enumerate the seven attack classes explicitly, to reference the public seed directory, and to link the binding scenario schema in the private repo's auditor handbook.
+
+### Notes
+- Public-seed scenario files conform to the scenario YAML schema published in the private repository at `auditor-handbook/scenario-schema.md`. The seed exists so vendors and researchers can prepare and critique without needing access to the private library; per §1.5.2 the ≥ 30% private rotation continues to defend against gameability.
+- No effect on tiers, thresholds, or pass criteria. Patch-level addition.
 
 ---
 
