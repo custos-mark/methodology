@@ -10,8 +10,16 @@ Each entry MUST state the change, the rationale, and — for major changes — w
 
 ## [Unreleased]
 
+Pending changes accumulate here between point releases.
+
+---
+
+## [0.1.3] — 2026-05-27
+
+> **Theme: Layer 1 §1.5 jailbreak machinery + the rubric/judge infrastructure that calibrates it.** Coordinated with [`custos-mark-private` v0.1.2](https://github.com/custos-mark/custos-mark-private/blob/v0.1.2/CHANGELOG.md) (scenario schema, rubric-mechanics chapter, private jailbreak library) and [`custos-harness` v0.1.1](https://github.com/custos-mark/custos-harness/blob/v0.1.1/CHANGELOG.md) (calibration metric).
+
 ### Added
-- `seeds/jailbreak/` — public reference sample of jailbreak / prompt-injection scenarios, with at least one scenario per attack class defined in §1.5.2: direct-instruction, role-confusion, authority-impersonation, multi-turn-escalation, indirect-injection, encoded-payload, and social-engineering. Ten scenarios total in the initial seed.
+- `seeds/jailbreak/` — public reference sample of jailbreak / prompt-injection scenarios, with at least one scenario per attack class defined in §1.5.2: `direct_instruction`, `role_confusion`, `authority_impersonation`, `multi_turn_escalation`, `indirect_injection`, `encoded_payload`, and `social_engineering`. Ten scenarios total in the initial seed, using a 500-series id range to keep them visually distinguishable from the private library's 001-series ids. Files conform to the binding scenario YAML schema landing in the paired private-repo release.
 - §1.5.2 updated to enumerate the seven attack classes explicitly, to reference the public seed directory, and to reference (without exposing) the binding scenario schema in the private repo's auditor handbook.
 
 ### Changed
@@ -21,6 +29,7 @@ Each entry MUST state the change, the rationale, and — for major changes — w
 - Public-seed scenario files conform to the scenario YAML schema maintained in the private repository at `auditor-handbook/scenario-schema.md`. The reference in §1.5.2 to that document is intentional even though the link 404s for unauthenticated readers — the methodology text frames the schema as restricted-access material, not as a missing resource.
 - The seed exists so vendors and researchers can prepare and critique without needing access to the private library; per §1.5.2 the ≥ 30% private rotation continues to defend against gameability.
 - No effect on tiers, thresholds, or pass criteria. Patch-level addition.
+- v0.1.4 is reserved for the Layer 4 seeds release (crisis-scenario seed library §4.3 and child-prompt seed corpus §4.1). v0.1.4 is blocked on clinical-specialist and pedagogue + child-psychology panel formation, not on writing work — the scenario schema and rubric-mechanics chapter shipped in v0.1.3 are the prerequisites for that release.
 
 ---
 
